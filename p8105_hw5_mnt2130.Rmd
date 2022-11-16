@@ -205,7 +205,9 @@ ttest_results %>%
   )
 ```
 
-Next, this code makes a plot showing the average estimate of μ̂  on the y axis and the true value of μ on the x axis. It also overlaysthe average estimate of μ̂  only in samples for which the null was rejected on the y axis and the true value of μ on the x axis onto the first plot. 
+From the plot, we observe that as the effect size increases, we also see that the power of the one-sample t-test also increases, until the proportion of times the null was rejected starts to approach the value of 1, then it starts to reach an asymptote and the change between the power of the test and the effect size begins to plateau. 
+
+Next, this code makes a plot showing the average estimate of μ̂  on the y axis and the true value of μ on the x axis. It also overlays the average estimate of μ̂  only in samples for which the null was rejected on the y axis and the true value of μ on the x axis onto the first plot. 
 
 ```{r, message= FALSE, fig.width=8, fig.height=12}
 ttest_results2 = ttest_results %>% 
@@ -234,3 +236,4 @@ ttest_results %>%
             **Solid black line shows all tests (null hypothesis rejected + null hypothesis not rejected)"
   ) 
 ```
+Comparing the model for the sample with all tests versus the model for the sample with only tests where the null hypothesis were rejected, the sample average of μ̂ across tests for which the null is rejected is approximately equal to the true value of μ starting when the true population mean is equal to 3. For smaller values, the sample average of μ̂ is slightly larger than the true value of μ. 
